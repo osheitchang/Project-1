@@ -5,7 +5,7 @@ html, body {
 }
 
 .container {
-    margin: 2em 0;
+    margin: 0 3em;;
 }
 
 .background {
@@ -22,7 +22,6 @@ display: flex;
 flex-direction:column;
 align-items: center;
 justify-content:flex-end;
-border:1px solid yellow;
  color:white;
  font-family: 'Yanone Kaffeesatz'
 }
@@ -37,20 +36,26 @@ border:1px solid yellow;
     margin:0 10em;
 }
 #main-img  {
-    height: 150px;
-    border-radius:3000px;
+    height: 200px;
+    width: 200px;
+    border-radius:300%;
     border:4px solid white;
 }
 
-.previous-round {
-    width:10px;
+.previous-round img {
+    height:60px;
 }
 
-.next-round {
-
+.next-round img {
+    height:60px;
 }
+
 
 a {
     text-decoration: none;
     display: inlin-block;
+}
+
+.pager {
+
 }
