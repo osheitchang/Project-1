@@ -1,0 +1,56 @@
+html, body {
+    padding:0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+.container {
+    margin: 2em 0;
+}
+
+.background {
+    background-image: url("img/galaxy-milky-way-orbit-110854.jpg")
+}
+
+.size {
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+.main {
+display: flex;
+flex-direction:column;
+align-items: center;
+justify-content:flex-end;
+border:1px solid yellow;
+ color:white;
+ font-family: 'Yanone Kaffeesatz'
+}
+
+.main p {
+    text-align:center;
+    margin: 0 15em;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin:0 10em;
+}
+#main-img  {
+    height: 150px;
+    border-radius:3000px;
+    border:4px solid white;
+}
+
+.previous-round {
+    width:10px;
+}
+
+.next-round {
+
+}
+
+a {
+    text-decoration: none;
+    display: inlin-block;
+}
