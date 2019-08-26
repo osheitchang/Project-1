@@ -14,8 +14,7 @@ html, body {
 
 .size {
     background-size:contain;
-    background-repeat: no-repeat;
-    height: 1000px;
+    height: 500px;
 }
 .main {
 display: flex;
@@ -58,4 +57,57 @@ a {
 
 .pager {
 
+}
+
+.section-2 {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:white;
+    font-family:'Yanone Kaffeesatz';
+    background-image: linear-gradient(#323232,black );
+    border-top: 2px solid #fafafa;
+}
+
+.section-2 img {
+    width: 300px;
+}
+
+.text-img {
+    display: flex;
+    margin: 1em 3em;
+
+}
+
+.text-img img {
+    border: 3px solid white;
+}
+
+.text-img p {
+    margin: 0 6em;
+}
+
+.section-3 {
+    background-color:  linear-gradient(black, #323232 );
+    font-family:'Yanone Kaffeesatz';
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.section-4 {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    font-family:'Yanone Kaffeesatz'
+}
+
+.card {
+    background-color:#fafafa
+}
+
+.container {
+    display:flex;
+    justify-content:space-between;
+    
 }
