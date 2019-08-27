@@ -37,7 +37,60 @@ function showRocket(rocket){
             document.getElementById('rocket-description').innerText = rocket.description;
            document.getElementById('main-img').setAttribute("src", rocket.flickr_images[0]) 
 }
+console.log(document.getElementById("nextButton"))
+let x = 0;
+function nextButtom () {
+    document.getElementById("nextButton").onclick = (e => {
+        console.log("hello")
+        x++
+        if(x > moments.length-1) {
+            x = 0;
+        }
+        assignMoments()
+    })
+}
+nextButtom()
 
+let moments = {}
+
+function getMoments (e) {
+  let history =  axios.get('https://api.spacexdata.com/v3/history').then(m => {
+        moments = m.data
+        console.log(moments)
+        return moments
+    })
+}
+getMoments()
+
+function assignMoments () {
+    document.getElementById("title-moment").innerText = moments[x].title
+    document.getElementById("details-moment").innerText = moments[x].details
+    document.getElementById("launch-date").innerText = moments[x].event_date_utc
+
+}
+
+
+function launch () {
+    
+    document.getElementById("launch-button").onmousedown = (e=> {
+        //document.querySelector("#launch-button").style.backgroundColor = "#d3090d"
+        //alert("Are you sure!???");
+        console.log("hello")
+        document.getElementsByClassName('rocket')[0].className = "rocket fly"
+        // document.getElementById("launch-button").onmouseleave = (e=> {
+        //     document.querySelector("#launch-button").style.backgroundColor = "#ff171b"
+
+    })
+
+
+
+    //document.getElementById("launch-button").onmouseup = (e) => {
+        
+        //document.getElementsByClassName('rocket')[0].className = "rocket"
+        //e.target.style.backgroundColor = 'blue'
+    //}
+}
+launch()
 
 // //curl -s https://api.spacexdata.com/v3/launches/latest
 // // axios.get("https://api.spacexdata.com/v3/launches/latest").then(result=>{
@@ -98,3 +151,10 @@ function showRocket(rocket){
 // // }
 
 // changeInfo()
+
+
+
+
+
+
+
